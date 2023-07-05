@@ -1,0 +1,42 @@
+{
+    "cli": true,
+    "target": "directory",
+    "adapterName": "petwalk",
+    "title": "petwalk",
+    "description": "petwalk",
+    "keywords": [
+        "petwalk"
+    ],
+    "expert": "no",
+    "features": [
+        "adapter"
+    ],
+    "adminFeatures": [],
+    "type": "household",
+    "startMode": "daemon",
+    "connectionType": "local",
+    "dataSource": "poll",
+    "connectionIndicator": "no",
+    "language": "JavaScript",
+    "nodeVersion": "14",
+    "adminUi": "json",
+    "tools": [
+        "ESLint",
+        "type checking"
+    ],
+    "releaseScript": "yes",
+    "devServer": "yes",
+    "devServerPort": 9933,
+    "indentation": "Space (4)",
+    "quotes": "double",
+    "es6class": "yes",
+    "authorName": "holger",
+    "authorGithub": "Holger-Will",
+    "authorEmail": "h.will@klimapartner.de",
+    "gitRemoteProtocol": "HTTPS",
+    "gitCommit": "no",
+    "defaultBranch": "main",
+    "license": "MIT License",
+    "dependabot": "yes",
+    "creatorVersion": "2.4.0"
+}

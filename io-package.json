@@ -1,0 +1,166 @@
+{
+    "common": {
+        "name": "petwalk",
+        "version": "0.1.0",
+        "news": {
+            "0.1.0": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "uk": "Початкова версія",
+                "zh-cn": "首次出版"
+            }
+        },
+        "title": "petWALK",
+        "titleLang": {
+            "en": "petWALK",
+            "de": "petWALK",
+            "ru": "petWALK",
+            "pt": "petWALK",
+            "nl": "petWALK",
+            "fr": "petWALK",
+            "it": "petwalk",
+            "es": "petWALK",
+            "pl": "petWALK",
+            "uk": "petWALK",
+            "zh-cn": "petWALK"
+        },
+        "desc": {
+            "en": "Adapter for the petWALK pet door local API",
+            "de": "Adapter für die petWALK Tiertür API",
+            "ru": "Адаптер для локального API двери для домашних животных petWALK",
+            "pt": "Adaptador para a API local da porta petWALK",
+            "nl": "Adapter voor de lokale API van petWALK huisdierluik",
+            "fr": "Adaptateur pour l'API locale de la porte pour animaux petWALK",
+            "it": "Adattatore per l'API locale della porta per animali domestici petWALK",
+            "es": "Adaptador para la API local de la puerta para mascotas petWALK",
+            "pl": "Adapter do lokalnego interfejsu API drzwi dla zwierząt petWALK",
+            "uk": "Адаптер для локального API petWALK pet door",
+            "zh-cn": "petWALK 宠物门本地 API 的适配器"
+        },
+        "authors": [
+            "Holger Will <h.will@klimapartner.de>"
+        ],
+        "keywords": [
+            "petwalk"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "petwalk.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/Holger-Will/ioBroker.petwalk/main/admin/petwalk.png",
+        "readme": "https://github.com/Holger-Will/ioBroker.petwalk/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "household",
+        "compact": true,
+        "connectionType": "local",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "ip": "http://192.168.178.76:8080",
+        "polling": 1000
+    },
+    "objects": [],
+    "instanceObjects": [
+      {
+        "_id": "door",
+        "type": "state",
+        "common": {
+            "name": {"en":"door open","de":"Tür geöffnet"},
+            "type": "boolean",
+            "role": "switch.gate",
+            "read": true,
+            "write": true,
+            "desc": {"en":"state of the door (true = open, false = closed","de":"Zustand der Tür true = offen, false = geschlossen"}
+        },
+        "native":{}
+      },
+      {
+        "_id": "system",
+        "type": "state",
+        "common": {
+            "name": {"en":"system on/off","de":"System An/Aus"},
+            "type": "boolean",
+            "role": "switch.power",
+            "read": true,
+            "write": true,
+            "desc": {"en":"switch systen on/off","de":"System an- oder ausschalten"}
+        },
+        "native":{}
+      },
+      {
+        "_id": "motion_in",
+        "type": "state",
+        "common": {
+            "name": {"en":"Motion Sensor In","de":"Bewegungssensor Eingang"},
+            "type": "boolean",
+            "role": "switch",
+            "read": true,
+            "write": true,
+            "desc": {"en":"Allow Inbound Motion","de":"Bewegungssensor für Zugang zulassen"}
+        },
+        "native":{}
+      },
+      {
+        "_id": "motion_out",
+        "type": "state",
+        "common": {
+            "name": {"en":"Motion Sensor Out","de":"Bewegungssensor Ausgang"},
+            "type": "boolean",
+            "role": "switch",
+            "read": true,
+            "write": true,
+            "desc": {"en":"Allow Outbound Motion","de":"Bewegungssensor für Ausgang zulassen"}
+        },
+        "native":{}
+      },
+      {
+        "_id": "rfid",
+        "type": "state",
+        "common": {
+            "name": {"en":"rfid","de":"rfid"},
+            "type": "boolean",
+            "role": "switch",
+            "read": true,
+            "write": true,
+            "desc": {"en":"RFID sensor enabled","de":"RFID Sensor aktiviert"}
+        },
+        "native":{}
+      },
+      {
+        "_id": "time",
+        "type": "state",
+        "common": {
+            "name": {"en":"time","de":"time"},
+            "type": "boolean",
+            "role": "switch",
+            "read": true,
+            "write": true,
+            "desc": {"en":"time based access control enabled","de":"Zeitbasierte Zugangskontrolle aktiviert"}
+        },
+        "native":{}
+      }
+      
+    ]
+}
